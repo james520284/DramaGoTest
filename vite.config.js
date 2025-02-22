@@ -4,9 +4,7 @@ import react from "@vitejs/plugin-react";
 // https://vite.dev/config/
 export default defineConfig({
   // base 的寫法：
-  // base: '/DramaGo/',
+  base: '/DramaGoTest/',
 
-  //嚼勁自己測試github
-  base:process.env.NODE_ENV === 'production'? '/DramaGoTest/#/':'/', 
   plugins: [react()],
 });
