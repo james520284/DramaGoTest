@@ -104,7 +104,7 @@ const Design = () => {
                     className="brandBtn-2"
                     >按鈕文字</button>
                     <br />
-                    <span className="my-2">brandBtn-sm</span>
+                    <span className="my-2">brandBtn-2-sm</span>
                 </div>
                 <div className="col-3 text-center">
                     <button 
@@ -115,6 +115,42 @@ const Design = () => {
                     <span className="my-2">disable</span>
                 </div>
                 
+            </div>
+            <div className="row mb-3">
+                <div className="col-3 text-center">
+                    <button 
+                    type="button" 
+                    className="brandBtn-3"
+                    >按鈕文字</button>
+                    <br />
+                    <span className="my-2">brandBtn-3</span>
+                </div>
+                <div className="col-3 text-center">
+                    <button 
+                    type="button" 
+                    className="brandBtn-3 disable"
+                    >按鈕文字</button>
+                    <br />
+                    <span className="my-2">disable</span>
+                </div>
+            </div>
+            <div className="row mb-3">
+                <div className="col-3 text-center">
+                    <button 
+                    type="button" 
+                    className="brandBtn-4"
+                    >按鈕文字</button>
+                    <br />
+                    <span className="my-2">brandBtn-4</span>
+                </div>
+                <div className="col-3 text-center">
+                    <button 
+                    type="button" 
+                    className="brandBtn-4 disable"
+                    >按鈕文字</button>
+                    <br />
+                    <span className="my-2">disable</span>
+                </div>
             </div>
         </div>
     </>)
