@@ -1,4 +1,4 @@
-import { createHashRouter,Navigate} from "react-router-dom";
+import { createHashRouter, Navigate } from "react-router-dom";
 
 // 前台
 import FrontLayout from "../layout/front/FrontLayout";
@@ -6,9 +6,13 @@ import FrontHome from "../pages/front/FrontHome";
 import DramaList from "../pages/front/DramaList";
 import DramaInfo from "../pages/front/DramaInfo";
 import Profile from "../pages/front/Profile";
+import ProfileInfo from "../pages/front/ProfileInfo";
+import ProfileRecord from "../pages/front/ProfileRecord";
+import ProfileCollection from "../pages/front/ProfileCollection";
 // 後台
 import AdminLayout from "../layout/admin/AdminLayout";
 import AdminHome from "../pages/admin/AdminHome";
+import DramaManage from "../pages/admin/DramaManage";
 import TagManage from "../pages/admin/TagManage";
 import Chart from "../pages/admin/Chart";
 // 全域
@@ -37,6 +41,20 @@ const router = createHashRouter([
             {
                 path:'profile',              //個人主頁
                 element:<Profile/>,
+                children: [
+                {
+                    path: "profileInfo", //個人主頁個人資訊頁
+                    element: <ProfileInfo />,
+                },
+                {
+                    path: "profileRecord", //個人主頁劇會記錄頁
+                    element: <ProfileRecord />,
+                },
+                {
+                    path: "profileCollection", //個人主頁收藏頁
+                    element: <ProfileCollection />,
+                },
+                ],
             },
         ]    
     },
@@ -45,12 +63,16 @@ const router = createHashRouter([
         element:<AdminLayout/>,
         children:[
             {
-                index:true,
+                index:true, 
                 element:<Navigate to="admin" replace />,
             },
             {
                 path:'admin',                //後台首頁
                 element:<AdminHome/>,
+            },
+            {
+                path:'drama-manage',         //劇會管理頁
+                element:<DramaManage/>,
             },
             {
                 path:'tag-manage',           //標籤管理頁
@@ -74,6 +96,7 @@ const router = createHashRouter([
         path:'compView',
         element:<ComponentsView/>
     }
+
 ]);
 
 export default router;
